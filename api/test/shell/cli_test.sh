@@ -183,6 +183,8 @@ stop_dashboard() {
 
   run journalctl -u ${SERVICE_NAME}.service -n 30
 
+  echo "$output"
+
   [ $(echo "$output" | grep -c "Error while dialing dial tcp") -eq '1' ]
 
   stop_dashboard 6
