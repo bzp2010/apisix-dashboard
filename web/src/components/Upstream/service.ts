@@ -71,6 +71,11 @@ export const convertToFormData = (originData: UpstreamComponent.ResponseData) =>
     data.upstream_type = 'service_discovery';
   }
 
+  if (data['_discovery_type'] && data['_service_name']) {
+    data.upstream_type = 'seed';
+    data['_discovery_type'] = `seed_${data['_discovery_type']}`;
+  }
+
   return data;
 };
 
@@ -145,6 +150,11 @@ export const convertToRequestData = (
 
   if (upstream_type === 'service_discovery' && discovery_type && service_name) {
     if (!discovery_args) data.discovery_args = {};
+    return omit(data, 'upstream_type');
+  }
+
+  if (upstream_type === 'seed' && data['_discovery_type'] && data['_service_name']) {
+    data['_discovery_type'] = (data['_discovery_type'] || '').replaceAll('seed_', '');
     return omit(data, 'upstream_type');
   }
 

@@ -44,6 +44,7 @@ const UpstreamType: React.FC<Props> = ({ readonly, form }) => {
           <Select.Option value="service_discovery">
             {formatMessage({ id: 'component.upstream.fields.upstream_type.service_discovery' })}
           </Select.Option>
+          <Select.Option value="seed">APISIX Seed</Select.Option>
         </Select>
       </Form.Item>
 
@@ -52,7 +53,13 @@ const UpstreamType: React.FC<Props> = ({ readonly, form }) => {
           if (form.getFieldValue('upstream_type') === 'node') {
             return <Nodes readonly={readonly} />;
           }
-          return <ServiceDiscovery form={form} readonly={readonly} />;
+          return (
+            <ServiceDiscovery
+              form={form}
+              readonly={readonly}
+              isSeed={form.getFieldValue('upstream_type') === 'seed'}
+            />
+          );
         }}
       </Form.Item>
     </React.Fragment>

@@ -577,6 +577,13 @@
 								"service_name",
 								"type"
 							]
+						},
+						{
+							"required": [
+								"_discovery_type",
+								"_service_name",
+								"type"
+							]
 						}
 					],
 					"properties": {
@@ -878,6 +885,10 @@
 							"description": "discovery type",
 							"type": "string"
 						},
+						"_discovery_type": {
+							"description": "discovery type",
+							"type": "string"
+						},
 						"hash_on": {
 							"default": "vars",
 							"enum": [
@@ -1028,6 +1039,11 @@
 							]
 						},
 						"service_name": {
+							"maxLength": 256,
+							"minLength": 1,
+							"type": "string"
+						},
+						"_service_name": {
 							"maxLength": 256,
 							"minLength": 1,
 							"type": "string"

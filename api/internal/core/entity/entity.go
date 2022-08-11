@@ -181,6 +181,9 @@ type UpstreamDef struct {
 	TLS           *UpstreamTLS           `json:"tls,omitempty"`
 	KeepalivePool *UpstreamKeepalivePool `json:"keepalive_pool,omitempty"`
 	RetryTimeout  TimeoutValue           `json:"retry_timeout,omitempty"`
+
+	SDiscoveryType string `json:"_discovery_type,omitempty"`
+	SServiceName   string `json:"_service_name,omitempty"`
 }
 
 // swagger:model Upstream

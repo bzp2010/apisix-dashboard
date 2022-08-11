@@ -23,6 +23,7 @@ import ServiceDiscoveryArgs from '@/components/Upstream/components/ServiceDiscov
 type Props = {
   form: FormInstance;
   readonly?: boolean;
+  isSeed: boolean;
 };
 
 const discoveryType = {
@@ -33,15 +34,17 @@ const discoveryType = {
   },
   eureka: {},
   kubernetes: {},
+  seed_zookeeper: {},
+  seed_nacos: {},
 };
 
-const ServiceDiscovery: React.FC<Props> = ({ readonly, form }) => {
+const ServiceDiscovery: React.FC<Props> = ({ readonly, form, isSeed }) => {
   const { formatMessage } = useIntl();
 
   return (
     <React.Fragment>
       <Form.Item
-        name="discovery_type"
+        name={isSeed ? '_discovery_type' : 'discovery_type'}
         label={formatMessage({ id: 'component.upstream.fields.discovery_type' })}
         tooltip={formatMessage({ id: 'component.upstream.fields.discovery_type.tooltip' })}
         rules={[{ required: true }]}
@@ -62,7 +65,7 @@ const ServiceDiscovery: React.FC<Props> = ({ readonly, form }) => {
         </Select>
       </Form.Item>
       <Form.Item
-        name="service_name"
+        name={isSeed ? '_service_name' : 'service_name'}
         label={formatMessage({ id: 'component.upstream.fields.service_name' })}
         tooltip={formatMessage({ id: 'component.upstream.fields.service_name.tooltip' })}
         rules={[{ required: true }, { min: 1 }, { max: 256 }]}
@@ -74,6 +77,7 @@ const ServiceDiscovery: React.FC<Props> = ({ readonly, form }) => {
       </Form.Item>
       <Form.Item shouldUpdate noStyle>
         {() => {
+          if (isSeed) return null;
           if (!form.getFieldValue('discovery_type')) return null;
 
           const { args } = discoveryType[form.getFieldValue('discovery_type')];
