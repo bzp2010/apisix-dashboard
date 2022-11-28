@@ -49,7 +49,6 @@ import { timestampToLocaleString } from '@/helpers';
 import usePagination from '@/hooks/usePagination';
 import DataLoaderImport from '@/pages/Route/components/DataLoader/Import';
 
-import { DebugDrawView } from './components/DebugViews';
 import { EXPORT_FILE_MIME_TYPE_SUPPORTED } from './constants';
 import {
   create,
@@ -85,7 +84,6 @@ const Page: React.FC = () => {
   const [id, setId] = useState('');
   const [editorMode, setEditorMode] = useState<'create' | 'update'>('create');
   const { paginationConfig, savePageList, checkPageList } = usePagination();
-  const [debugDrawVisible, setDebugDrawVisible] = useState(false);
   const [routeId, setRouteId] = useState<string>('');
 
   useEffect(() => {
@@ -608,12 +606,6 @@ const Page: React.FC = () => {
         ]}
         footer={() => <ListFooter />}
         scroll={{ x: 1300 }}
-      />
-      <DebugDrawView
-        visible={debugDrawVisible}
-        onClose={() => {
-          setDebugDrawVisible(false);
-        }}
       />
       <RawDataEditor
         visible={visible}
