@@ -9,6 +9,6 @@ require (
 	github.com/mattn/go-isatty v0.0.12 // indirect
 	github.com/stretchr/testify v1.4.0
 	github.com/tidwall/gjson v1.6.1
-	golang.org/x/text v0.3.2 // indirect
+	golang.org/x/text v0.3.8 // indirect
 	gopkg.in/yaml.v2 v2.2.8 // indirect
 )
