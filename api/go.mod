@@ -14,16 +14,15 @@ require (
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/dustin/go-humanize v1.0.0 // indirect
 	github.com/evanphx/json-patch/v5 v5.1.0
-	github.com/gavv/httpexpect/v2 v2.3.1
 	github.com/getkin/kin-openapi v0.33.0
 	github.com/gin-contrib/gzip v0.0.3
 	github.com/gin-contrib/pprof v1.3.0
 	github.com/gin-contrib/static v0.0.0-20200916080430-d45d9a37d28e
-	github.com/gin-gonic/gin v1.6.3
+	github.com/gin-gonic/gin v1.9.0
+	github.com/google/uuid v1.2.0 // indirect
+	github.com/gorilla/websocket v1.4.2 // indirect
 	github.com/grpc-ecosystem/go-grpc-middleware v1.2.2 // indirect
 	github.com/jonboulle/clockwork v0.2.2 // indirect
-	github.com/onsi/ginkgo v1.10.1
-	github.com/onsi/gomega v1.7.0
 	github.com/prometheus/client_golang v1.8.0 // indirect
 	github.com/satori/go.uuid v1.2.0
 	github.com/shiningrush/droplet v0.2.6-0.20210127040147-53817015cd1b
@@ -32,7 +31,7 @@ require (
 	github.com/sony/sonyflake v1.0.0
 	github.com/spf13/cobra v0.0.3
 	github.com/spf13/viper v1.8.1
-	github.com/stretchr/testify v1.7.0
+	github.com/stretchr/testify v1.8.1
 	github.com/tidwall/gjson v1.6.7
 	github.com/tmc/grpc-websocket-proxy v0.0.0-20200427203606-3cfed13b9966 // indirect
 	github.com/xeipuuv/gojsonschema v1.2.0
