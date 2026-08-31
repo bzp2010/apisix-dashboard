@@ -76,7 +76,7 @@ jobs:
       - name: Run Test
         run: api/test/shell/manager_smoking.sh -s false
 
-      - uses: Azure/docker-login@v1
+      - uses: Azure/docker-login@v2
         if: ${{ github.event_name == 'push' }}
         with:
           login-server: apisixacr.azurecr.cn
