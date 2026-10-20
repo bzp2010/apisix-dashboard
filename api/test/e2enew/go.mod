@@ -1,6 +1,6 @@
 module github.com/apisix/manager-api/test/e2enew
 
-go 1.15
+go 1.24
 
 require (
 	github.com/gavv/httpexpect/v2 v2.3.1
@@ -19,7 +19,7 @@ require (
 	github.com/google/go-querystring v1.0.0 // indirect
 	github.com/gorilla/websocket v1.4.2 // indirect
 	github.com/imkira/go-interpol v1.0.0 // indirect
-	github.com/klauspost/compress v1.12.2 // indirect
+	github.com/klauspost/compress v1.18.7 // indirect
 	github.com/nxadm/tail v1.4.8 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/sergi/go-diff v1.0.0 // indirect
