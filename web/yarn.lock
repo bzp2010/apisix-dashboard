@@ -9229,9 +9229,9 @@ insert-module-globals@^7.0.0:
     xtend "^4.0.0"
 
 install-artifact-from-github@^1.0.2:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/install-artifact-from-github/-/install-artifact-from-github-1.2.0.tgz#adcbd123c16a4337ec44ea76d0ebf253cc16b074"
-  integrity sha512-3OxCPcY55XlVM3kkfIpeCgmoSKnMsz2A3Dbhsq0RXpIknKQmrX1YiznCeW9cD2ItFmDxziA3w6Eg8d80AoL3oA==
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/install-artifact-from-github/-/install-artifact-from-github-1.8.1.tgz#c3f001ca8b44592fb06de592e1bb67f09b72d10e"
+  integrity sha512-lV8dRlR/3i6Tk4X9agaqhMRY6ScVU3YOuKse0VRnP9+rUWfImeCjo1TeAefXEauNVF3a8QgOb6jW3CZJetVopw==
 
 internal-slot@^1.0.3:
   version "1.0.3"
